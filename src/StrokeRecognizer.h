@@ -30,6 +30,9 @@ class StrokeRecognizer{
 		vector<string> MgestureList;
 		GeometricRecognizer gm;
 		std::map<string,string> gestureMap;
+		MultiStrokeGesture mirror(MultiStrokeGesture gesture);
+		int maxXY(Path2D line);
+		int minXY(Path2D line);
 		
 		
 };

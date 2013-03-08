@@ -675,8 +675,10 @@ double GeometricRecognizer::Deg2Rad(double d)
 double GeometricRecognizer::Rad2Deg(double r)
 { return (r * 180.0 / 3.14); }
 
-RecognitionResult GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string method)
+void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string method)
 {
+	results.erase(results.begin(),results.end());
+
     bool useProtractor=false;
     if(method=="protractor"){
         cout<<"using protactor"<<endl;
@@ -690,7 +692,7 @@ RecognitionResult GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes
         if (allmultistrokenormalizedgestures.empty())
         {
                 std::cout << "No templates loaded so no symbols to match." << std::endl;
-                return RecognitionResult("Unknown", 0);
+                //return RecognitionResult("Unknown", 0);
         }
         points=normalizePath(points);
         Point2D startv=GeometricRecognizer::CalcStartUnitVector(points,StartAngleIndex);
@@ -727,15 +729,16 @@ RecognitionResult GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes
                             if (distance < bestDistance)
                             {
 								
-                                    
-									bestDistance     = distance;
-                                    indexOfBestMatch = i;
-                            }
+								bestDistance     = distance;
+                                indexOfBestMatch = i;
+	                        }
                         }
                     }
                 }
+				
 				RecognitionResult match(allmultistrokenormalizedgestures[i].at(1).name, 1.0 - (bestDistance / halfDiagonal));
 				results.push_back(match);
+				bestDistance = MAX_DOUBLE;
             }
 
         //--- Turn the distance into a percentage by dividing it by
@@ -751,7 +754,9 @@ RecognitionResult GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes
 
     //--- Make sure we actually found a good match
     //--- Sometimes we don't, like when the user doesn't draw enough points
-    if (-1 == indexOfBestMatch)
+    
+	/*	
+	if (-1 == indexOfBestMatch)
     {
             cout << "Couldn't find a good match." << endl;
             return RecognitionResult("Unknown", 1);
@@ -760,7 +765,26 @@ RecognitionResult GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes
     GestureTemplate tmp2=tmp.at(1);
     RecognitionResult bestMatch(tmp2.name, score);
     return bestMatch;
+	*/
+	
+	if(results.size() == 0){
+		 cout << "Couldn't find a good match." << endl;
+		 results.push_back(RecognitionResult("Unknown", 1));
+	}
+	
+}
 
+struct cmpResults
+{
+    bool operator()( const RecognitionResult& lx, const RecognitionResult& rx ) const {
+    	return lx.score > rx.score;
+    }
+};
+
+vector<RecognitionResult> GeometricRecognizer::getResults(){
+	
+	std::sort(results.begin(), results.end(), cmpResults() );
+	return results;
 }
 
 double GeometricRecognizer::AngleBetweenUnitVectors(Point2D v1,Point2D v2) // gives acute angle between unit vectors from (0,0) to v1, and (0,0) to v2

@@ -15,7 +15,12 @@ DianShou::DianShou(){
 DianShou::~DianShou(){
 	// Remove the sample listener when done
 	controller.removeListener(listener);
-
+	
+	delete &recognizer;
+	delete &sqlite;
+	delete &circle;
+	delete &controller;
+	
 }
 
 

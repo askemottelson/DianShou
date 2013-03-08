@@ -1,12 +1,204 @@
-﻿Build started 3/6/2013 5:01:57 PM.
+﻿Build started 3/8/2013 1:25:38 PM.
      1>Project "C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\apps\myApps\DianShou_of\DianShou_of.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\osc /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\posix /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\win32 /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\libs /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\ /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib\sqlite /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxFTGLFont /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\libs\FTGL\include\2012 /I..\..\..\libs\openFrameworks /I..\..\..\libs\openFrameworks\graphics /I..\..\..\libs\openFrameworks\app /I..\..\..\libs\openFrameworks\sound /I..\..\..\libs\openFrameworks\utils /I..\..\..\libs\openFrameworks\communication /I..\..\..\libs\openFrameworks\video /I..\..\..\libs\openFrameworks\types /I..\..\..\libs\openFrameworks\math /I..\..\..\libs\openFrameworks\3d /I..\..\..\libs\openFrameworks\gl /I..\..\..\libs\openFrameworks\events /I..\..\..\libs\glut\include /I..\..\..\libs\rtAudio\include /I..\..\..\libs\quicktime\include /I..\..\..\libs\freetype\include /I..\..\..\libs\freetype\include\freetype2 /I..\..\..\libs\freeImage\include /I..\..\..\libs\fmodex\include /I..\..\..\libs\videoInput\include /I..\..\..\libs\glew\include\ /I..\..\..\libs\glu\include /I..\..\..\libs\tess2\include /I..\..\..\libs\cairo\include\cairo /I..\..\..\libs\poco\include /I..\..\..\addons /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D POCO_STATIC /D CAIRO_WIN32_STATIC_BUILD /D DISABLE_SOME_FLOATING_POINT /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\Debug\\" /Fd"obj\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt src\StrokeRecognizer.cpp
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\osc /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\posix /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\win32 /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\libs /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\ /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib\sqlite /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxFTGLFont /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\libs\FTGL\include\2012 /I..\..\..\libs\openFrameworks /I..\..\..\libs\openFrameworks\graphics /I..\..\..\libs\openFrameworks\app /I..\..\..\libs\openFrameworks\sound /I..\..\..\libs\openFrameworks\utils /I..\..\..\libs\openFrameworks\communication /I..\..\..\libs\openFrameworks\video /I..\..\..\libs\openFrameworks\types /I..\..\..\libs\openFrameworks\math /I..\..\..\libs\openFrameworks\3d /I..\..\..\libs\openFrameworks\gl /I..\..\..\libs\openFrameworks\events /I..\..\..\libs\glut\include /I..\..\..\libs\rtAudio\include /I..\..\..\libs\quicktime\include /I..\..\..\libs\freetype\include /I..\..\..\libs\freetype\include\freetype2 /I..\..\..\libs\freeImage\include /I..\..\..\libs\fmodex\include /I..\..\..\libs\videoInput\include /I..\..\..\libs\glew\include\ /I..\..\..\libs\glu\include /I..\..\..\libs\tess2\include /I..\..\..\libs\cairo\include\cairo /I..\..\..\libs\poco\include /I..\..\..\addons /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D POCO_STATIC /D CAIRO_WIN32_STATIC_BUILD /D DISABLE_SOME_FLOATING_POINT /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\Debug\\" /Fd"obj\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\addons\ofxFTGLFont\ofxFTGLFont.cpp ..\..\..\addons\ofxSQLite\ofxSQLite.cpp ..\..\..\addons\ofxSQLite\ofxSQLiteAbstract.cpp ..\..\..\addons\ofxSQLite\ofxSQLiteDelete.cpp ..\..\..\addons\ofxSQLite\ofxSQLiteFieldValues.cpp ..\..\..\addons\ofxSQLite\ofxSQLiteInsert.cpp ..\..\..\addons\ofxSQLite\ofxSQLiteSelect.cpp ..\..\..\addons\ofxSQLite\ofxSQLiteSimpler.cpp ..\..\..\addons\ofxSQLite\ofxSQLiteUpdate.cpp "src\$1\lib\GeometricRecognizer.cpp" src\LeapListener.cpp src\main.cpp src\DianShou.cpp src\StrokeRecognizer.cpp src\TextInput\textInput.cpp
+         textInput.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\offileutils.h(194): warning C4250: 'ofFile' : inherits 'std::basic_istream<_Elem,_Traits>::std::basic_istream<_Elem,_Traits>::_Add_vtordisp1' via dominance
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files\microsoft visual studio 11.0\vc\include\istream(74) : see declaration of 'std::basic_istream<_Elem,_Traits>::_Add_vtordisp1'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\offileutils.h(194): warning C4250: 'ofFile' : inherits 'std::basic_ostream<_Elem,_Traits>::std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2' via dominance
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files\microsoft visual studio 11.0\vc\include\ostream(90) : see declaration of 'std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
          StrokeRecognizer.cpp
-     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\strokerecognizer.cpp(69): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\strokerecognizer.cpp(71): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\strokerecognizer.cpp(73): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\strokerecognizer.cpp(99): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\offileutils.h(194): warning C4250: 'ofFile' : inherits 'std::basic_istream<_Elem,_Traits>::std::basic_istream<_Elem,_Traits>::_Add_vtordisp1' via dominance
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files\microsoft visual studio 11.0\vc\include\istream(74) : see declaration of 'std::basic_istream<_Elem,_Traits>::_Add_vtordisp1'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\offileutils.h(194): warning C4250: 'ofFile' : inherits 'std::basic_ostream<_Elem,_Traits>::std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2' via dominance
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files\microsoft visual studio 11.0\vc\include\ostream(90) : see declaration of 'std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+         DianShou.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\offileutils.h(194): warning C4250: 'ofFile' : inherits 'std::basic_istream<_Elem,_Traits>::std::basic_istream<_Elem,_Traits>::_Add_vtordisp1' via dominance
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files\microsoft visual studio 11.0\vc\include\istream(74) : see declaration of 'std::basic_istream<_Elem,_Traits>::_Add_vtordisp1'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\offileutils.h(194): warning C4250: 'ofFile' : inherits 'std::basic_ostream<_Elem,_Traits>::std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2' via dominance
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files\microsoft visual studio 11.0\vc\include\ostream(90) : see declaration of 'std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\leap\leap\leapmath.h(21): warning C4005: 'PI' : macro redefinition
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\ofconstants.h(320) : see previous definition of 'PI'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\leap\leap\leapmath.h(27): warning C4005: 'DEG_TO_RAD' : macro redefinition
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\ofconstants.h(340) : see previous definition of 'DEG_TO_RAD'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\leap\leap\leapmath.h(33): warning C4005: 'RAD_TO_DEG' : macro redefinition
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\ofconstants.h(344) : see previous definition of 'RAD_TO_DEG'
+         main.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\offileutils.h(194): warning C4250: 'ofFile' : inherits 'std::basic_istream<_Elem,_Traits>::std::basic_istream<_Elem,_Traits>::_Add_vtordisp1' via dominance
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files\microsoft visual studio 11.0\vc\include\istream(74) : see declaration of 'std::basic_istream<_Elem,_Traits>::_Add_vtordisp1'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\offileutils.h(194): warning C4250: 'ofFile' : inherits 'std::basic_ostream<_Elem,_Traits>::std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2' via dominance
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files\microsoft visual studio 11.0\vc\include\ostream(90) : see declaration of 'std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\leap\leap\leapmath.h(21): warning C4005: 'PI' : macro redefinition
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\ofconstants.h(320) : see previous definition of 'PI'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\leap\leap\leapmath.h(27): warning C4005: 'DEG_TO_RAD' : macro redefinition
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\ofconstants.h(340) : see previous definition of 'DEG_TO_RAD'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\leap\leap\leapmath.h(33): warning C4005: 'RAD_TO_DEG' : macro redefinition
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\ofconstants.h(344) : see previous definition of 'RAD_TO_DEG'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxui\src\ofxuicanvas.h(1132): warning C4141: 'virtual' : used more than once
+         LeapListener.cpp
+         GeometricRecognizer.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(472): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(474): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(527): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(533): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(534): warning C4258: 'i' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(527) : definition of 'i' ignored
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(514) : definition of 'i' used
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(548): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(555): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(576): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(633): warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(653): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(662): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\apps\myapps\dianshou_of\src\$1\lib\geometricrecognizer.cpp(714): warning C4018: '<' : signed/unsigned mismatch
+         ofxSQLiteUpdate.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteupdate.h(10): warning C4099: 'sqlite3' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\lib\sqlite\sqlite3.h(174) : see declaration of 'sqlite3'
+         ofxSQLiteSimpler.cpp
+         ofxSQLiteSelect.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteselect.cpp(53): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteselect.cpp(79): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteselect.cpp(80): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteselect.cpp(164): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteselect.cpp(197): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteselect.cpp(205): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteselect.cpp(207): warning C4018: '<' : signed/unsigned mismatch
+         ofxSQLiteInsert.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteabstract.h(9): warning C4099: 'sqlite3' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\lib\sqlite\sqlite3.h(174) : see declaration of 'sqlite3'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteinsert.h(10): warning C4099: 'sqlite3' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\lib\sqlite\sqlite3.h(174) : see declaration of 'sqlite3'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteupdate.h(10): warning C4099: 'sqlite3' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\lib\sqlite\sqlite3.h(174) : see declaration of 'sqlite3'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqlitedelete.h(10): warning C4099: 'sqlite3' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\lib\sqlite\sqlite3.h(174) : see declaration of 'sqlite3'
+         ofxSQLiteFieldValues.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqlitefieldvalues.cpp(100): warning C4018: '<' : signed/unsigned mismatch
+         ofxSQLiteDelete.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqlitedelete.h(10): warning C4099: 'sqlite3' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\lib\sqlite\sqlite3.h(174) : see declaration of 'sqlite3'
+         ofxSQLiteAbstract.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\lib\sqlite\sqlite3.h(174): warning C4099: 'sqlite3' : type name first seen using 'class' now seen using 'struct'
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteabstract.h(9) : see declaration of 'sqlite3'
+         ofxSQLite.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteabstract.h(9): warning C4099: 'sqlite3' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\lib\sqlite\sqlite3.h(174) : see declaration of 'sqlite3'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteinsert.h(10): warning C4099: 'sqlite3' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\lib\sqlite\sqlite3.h(174) : see declaration of 'sqlite3'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqliteupdate.h(10): warning C4099: 'sqlite3' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\lib\sqlite\sqlite3.h(174) : see declaration of 'sqlite3'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqlitedelete.h(10): warning C4099: 'sqlite3' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\lib\sqlite\sqlite3.h(174) : see declaration of 'sqlite3'
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxsqlite\ofxsqlite.cpp(62): warning C4244: 'return' : conversion from 'sqlite3_int64' to 'int', possible loss of data
+         ofxFTGLFont.cpp
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\offileutils.h(194): warning C4250: 'ofFile' : inherits 'std::basic_istream<_Elem,_Traits>::std::basic_istream<_Elem,_Traits>::_Add_vtordisp1' via dominance
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files\microsoft visual studio 11.0\vc\include\istream(74) : see declaration of 'std::basic_istream<_Elem,_Traits>::_Add_vtordisp1'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\libs\openframeworks\utils\offileutils.h(194): warning C4250: 'ofFile' : inherits 'std::basic_ostream<_Elem,_Traits>::std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2' via dominance
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files\microsoft visual studio 11.0\vc\include\ostream(90) : see declaration of 'std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+         Generating Code...
+     1>c:\users\aske7\dropbox\diku\bachelor\udvikling\files\openframeworks\addons\ofxftglfont\ofxftglfont.cpp(71): warning C4715: 'ofxFTGLFont::getChar' : not all control paths return a value
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\osc /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\posix /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\win32 /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\libs /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\ /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\src /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib\sqlite /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxFTGLFont /IC:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\libs\FTGL\include\2012 /I..\..\..\libs\openFrameworks /I..\..\..\libs\openFrameworks\graphics /I..\..\..\libs\openFrameworks\app /I..\..\..\libs\openFrameworks\sound /I..\..\..\libs\openFrameworks\utils /I..\..\..\libs\openFrameworks\communication /I..\..\..\libs\openFrameworks\video /I..\..\..\libs\openFrameworks\types /I..\..\..\libs\openFrameworks\math /I..\..\..\libs\openFrameworks\3d /I..\..\..\libs\openFrameworks\gl /I..\..\..\libs\openFrameworks\events /I..\..\..\libs\glut\include /I..\..\..\libs\rtAudio\include /I..\..\..\libs\quicktime\include /I..\..\..\libs\freetype\include /I..\..\..\libs\freetype\include\freetype2 /I..\..\..\libs\freeImage\include /I..\..\..\libs\fmodex\include /I..\..\..\libs\videoInput\include /I..\..\..\libs\glew\include\ /I..\..\..\libs\glu\include /I..\..\..\libs\tess2\include /I..\..\..\libs\cairo\include\cairo /I..\..\..\libs\poco\include /I..\..\..\addons /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D POCO_STATIC /D CAIRO_WIN32_STATIC_BUILD /D DISABLE_SOME_FLOATING_POINT /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\Debug\\" /Fd"obj\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\..\addons\ofxSQLite\lib\sqlite\sqlite3.c
+         sqlite3.c
        Link:
          C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"bin\DianShou_of_debug.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\libs\FTGL\lib\vs2012 /LIBPATH:C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\apps\myApps\DianShou_of\Leap\lib\x86 /LIBPATH:..\..\..\libs\glut\lib\vs2010 /LIBPATH:..\..\..\libs\rtAudio\lib\vs2010 /LIBPATH:..\..\..\libs\FreeImage\lib\vs2010 /LIBPATH:..\..\..\libs\freetype\lib\vs2010 /LIBPATH:..\..\..\libs\quicktime\lib\vs2010 /LIBPATH:..\..\..\libs\fmodex\lib\vs2010 /LIBPATH:..\..\..\libs\videoInput\lib\vs2010 /LIBPATH:..\..\..\libs\cairo\lib\vs2010 /LIBPATH:..\..\..\libs\glew\lib\vs2010 /LIBPATH:..\..\..\libs\glu\lib\vs2010 /LIBPATH:..\..\..\libs\Poco\lib\vs2010 /LIBPATH:..\..\..\libs\tess2\lib\vs2010 Leapd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ftgl.lib "cairo-static.lib" "pixman-1.lib" msimg32.lib OpenGL32.lib GLu32.lib kernel32.lib setupapi.lib Vfw32.lib comctl32.lib glut32.lib rtAudioD.lib videoInput.lib libfreetype.lib FreeImage.lib qtmlClient.lib dsound.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib glew32s.lib fmodex_vc.lib glu32.lib PocoFoundationmdd.lib PocoNetmdd.lib PocoUtilmdd.lib PocoXMLmdd.lib Ws2_32.lib tess2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:PocoFoundationd.lib /NODEFAULTLIB:atlthunk.lib /NODEFAULTLIB:LIBC.lib /NODEFAULTLIB:LIBCMT /NODEFAULTLIB:msvcrt.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\apps\myApps\DianShou_of\bin\DianShou_of_debug_debugInfo.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:"bin\DianShou_of_debug.lib" /MACHINE:X86 /SAFESEH obj\Debug\ofxFTGLFont.obj
          obj\Debug\sqlite3.obj
@@ -148,4 +340,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.10
+Time Elapsed 00:01:04.01

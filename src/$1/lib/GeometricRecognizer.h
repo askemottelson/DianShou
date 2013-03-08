@@ -70,6 +70,7 @@ namespace DollarRecognizer
                 //--- What we match the input shape against (sub part of allTemplates)
                 MultipleStrokeGestureTemplates Mtemplates;
 
+
 	public:
 		MultipleStrokeGestureTemplates allMtemplates;
 		GeometricRecognizer();
@@ -105,9 +106,9 @@ namespace DollarRecognizer
                 void loadMultistrokeTemplates();
                 void activateMultiStrokesTemplates(vector<string>);
 
-                RecognitionResult Multirecognize(MultiStrokeGesture paths, string method);
+                void Multirecognize(MultiStrokeGesture paths, string method);
 				int addMultiStrokesTemplate(string name, MultiStrokeGesture paths);
-		vector<RecognitionResult> results;
+		vector<RecognitionResult> getResults();
 
         private:
                 bool inTemplates(string, vector<string>);
@@ -123,6 +124,8 @@ namespace DollarRecognizer
                 Path2D UnistrokeTemplate(Path2D points,string name);
 
                 double AngleBetweenUnitVectors(Point2D v1,Point2D v2);
+				vector<RecognitionResult> results;
+
 
 	};
 }
