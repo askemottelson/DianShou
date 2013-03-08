@@ -1,5 +1,5 @@
 bin/
-obj/*
+obj/
 DianShou_of.opensdf
 DianShou_of.sdf
 DianShou_of.v11.suo
