@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
+    <RootNamespace>DianShou_of</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs2010\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs2010\openFrameworksDebug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">obj\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">obj\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_debug</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\osc;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\posix;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\win32;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\libs;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib\sqlite;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxFTGLFont;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\libs\FTGL\include\2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName)_debugInfo.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>Leapd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;ftgl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\libs\FTGL\lib\vs2012;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\apps\myApps\DianShou_of\Leap\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries);msvcrt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent />
+    <PostBuildEvent>
+      <Command>xcopy /e /i /y "$(ProjectDir)..\..\..\export\vs2010\*.dll" "$(ProjectDir)bin"
+copy Leap\lib\x86\*.dll "$(OutDir)"
+
+
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat />
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\addons\ofxFTGLFont\ofxFTGLFont.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSQLite\lib\sqlite\sqlite3.c" />
+    <ClCompile Include="..\..\..\addons\ofxSQLite\ofxSQLite.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSQLite\ofxSQLiteAbstract.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSQLite\ofxSQLiteDelete.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSQLite\ofxSQLiteFieldValues.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSQLite\ofxSQLiteInsert.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSQLite\ofxSQLiteSelect.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSQLite\ofxSQLiteSimpler.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSQLite\ofxSQLiteUpdate.cpp" />
+    <ClCompile Include="src\$1\lib\GeometricRecognizer.cpp" />
+    <ClCompile Include="src\LeapListener.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\DianShou.cpp" />
+    <ClCompile Include="src\StrokeRecognizer.cpp" />
+    <ClCompile Include="src\TextInput\textInput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\addons\ofxFTGLFont\ofxFTGLFont.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\lib\sqlite\sqlite3.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\lib\sqlite\sqlite3ext.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLite.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLiteAbstract.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLiteDelete.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLiteFieldValues.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLiteHeaders.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLiteInsert.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLiteSelect.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLiteSimpler.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLiteType.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLiteTypeNow.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLiteUpdate.h" />
+    <ClInclude Include="..\..\..\addons\ofxSQLite\ofxSQLiteWhere.h" />
+    <ClInclude Include="src\$1\lib\GeometricRecognizer.h" />
+    <ClInclude Include="src\$1\lib\GeometricRecognizerTypes.h" />
+    <ClInclude Include="src\$1\lib\GestureTemplate.h" />
+    <ClInclude Include="src\$1\lib\MultipleStrokeGestureTemplate.h" />
+    <ClInclude Include="src\$1\lib\PathWriter.h" />
+    <ClInclude Include="src\$1\lib\SampleGestures.h" />
+    <ClInclude Include="src\$1\lib\SampleMultiStrokeGestures.h" />
+    <ClInclude Include="src\$1\lib\utils.h" />
+    <ClInclude Include="src\DianShou.h" />
+    <ClInclude Include="src\LeapListener.h" />
+    <ClInclude Include="src\StrokeRecognizer.h" />
+    <ClInclude Include="src\TextInput\textInput.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\libs\openFrameworksCompiled\project\vs2010\openframeworksLib.vcxproj">
+      <Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
