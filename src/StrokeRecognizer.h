@@ -1,7 +1,8 @@
-#include <iostream>
 #include "$1\lib\GeometricRecognizer.h"
 #include "$1\lib\PathWriter.h"
+
 #include <map> 
+#include <iostream>
 
 using namespace DollarRecognizer;
 
@@ -22,17 +23,22 @@ class StrokeRecognizer{
 		void addChar(string charId, string charac);
 		string getChar(string charId);
 		void init();
+		MultiStrokeGesture mirror();
+		MultiStrokeGesture MultiStrokes;
+		void reset_gestures();
+
+		
 
 	private:
-		MultiStrokeGesture MultiStrokes;
 		Path2D line;
 		utils util;
 		vector<string> MgestureList;
 		GeometricRecognizer gm;
 		std::map<string,string> gestureMap;
 		MultiStrokeGesture mirror(MultiStrokeGesture gesture);
-		int maxXY(Path2D line);
-		int minXY(Path2D line);
+		int maxXY(Path2D line, string xy);
+		int minXY(Path2D line, string xy);
+		
 		
 		
 };

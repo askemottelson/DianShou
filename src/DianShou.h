@@ -2,10 +2,13 @@
 
 #include "ofMain.h"
 #include "LeapListener.h"
+
 #include "ofxFTGLFont.h"
 #include "ofxSQLiteHeaders.h"
 #include "StrokeRecognizer.h"
 #include "TextInput/textInput.h"
+
+
 
 
 
@@ -37,9 +40,9 @@ class DianShou : public ofBaseApp{
 		Controller controller;
 
 		// global variables
-		float *bgcolor;
-		float *cursorcolor;
-		float *cursor;
+		int *bgcolor;
+		int *cursorcolor;
+		int *cursor;
 
 		std::vector<float> circle;
 
@@ -56,6 +59,9 @@ class DianShou : public ofBaseApp{
 
 		// GUI
 		textInput textBox;
+
+	private:
+		void initDB();
 	
 
 		
