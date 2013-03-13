@@ -485,20 +485,10 @@ namespace DollarRecognizer
         //
         void GeometricRecognizer::loadMultistrokeTemplates() // constructor
         {
-            //SampleMultiStrokeGestures samplemultistrokegestures;
-            //addMultiStrokesTemplate("T", samplemultistrokegestures.getGestureT());
-            //addMultiStrokesTemplate("X", samplemultistrokegestures.getGestureX());
-            //addMultiStrokesTemplate("P", samplemultistrokegestures.getGestureP());
-            //addMultiStrokesTemplate("D", samplemultistrokegestures.getGestureD());
-            //addMultiStrokesTemplate("I", samplemultistrokegestures.getGestureI());
-            //addMultiStrokesTemplate("N", samplemultistrokegestures.getGestureN());
-			
-			//addMultiStrokesTemplate("2", samplemultistrokegestures.getGestureNi());
-         }
+        }
 
         int GeometricRecognizer::addMultiStrokesTemplate(wstring name, MultiStrokeGesture paths)
         {
-			cout << "add multistroke " << endl;
                 allMtemplates.push_back(MultipleStrokeGestureTemplate(name, paths));
                 //--- Let them know how many examples of this template we have now
                 int numInstancesOfGesture = 0;
@@ -516,33 +506,48 @@ namespace DollarRecognizer
             cout<< "No. of templates in Multi-Stroke database " <<allMtemplates.size()<<endl;
             for (unsigned int i=0; i<allMtemplates.size() ; i++)
             {
+				cout << "i " << i << endl;
 
               //  cout<< "Processing Template " <<allMtemplates.at(i).name<<endl;
                 if (inTemplates(allMtemplates.at(i).name, list))
                 {
+					cout << "name is there " << endl;
                   //  cout<<"Added Template :"<<allMtemplates.at(i).name<<endl;
                     Mtemplates.push_back(allMtemplates.at(i));
+					cout << "push " << endl;
                     order.clear();
                     orders.clear();
+					cout << "clear " << endl;
                     MultipleStrokeGestureTemplate strokes = allMtemplates.at(i);
                     order.resize(strokes.paths.size());
+					cout << "resize " << endl;
 
                     for (int i = 0; i < strokes.paths.size(); i++)
                             order[i] = i; // initialize; // initialize
 
+					cout << "order init " << endl;
+
                     GeometricRecognizer::HeapPermute(strokes.paths.size());
-                    MultiStrokeGesture unistrokes = GeometricRecognizer::MakeUnistrokes(strokes.paths); // returns array of point arrays
+					cout << "heappermute " << endl;
+                    //MultiStrokeGesture unistrokes = GeometricRecognizer::MakeUnistrokes(strokes.paths); // returns array of point arrays
+					MultiStrokeGesture unistrokes = strokes.paths;
+
+
+					cout << "unistroeks " << endl;
                     allunistrokenormalizedtemplates.clear();
+					cout << "clear2 " << endl;
                     for (int j = 0; j < unistrokes.size(); j++)
                         Path2D unistroke = GeometricRecognizer::UnistrokeTemplate(unistrokes.at(j),allMtemplates.at(i).name);
-                    allmultistrokenormalizedgestures.push_back(allunistrokenormalizedtemplates);
+                    
+					cout << "push2 " << endl;
+					allmultistrokenormalizedgestures.push_back(allunistrokenormalizedtemplates);
 
 
                 }
 
 
                }
-
+			cout << "activation done " << endl;
         }
         //Perform permutations to make all the combination of multistroke gesture
         MultiStrokeGesture GeometricRecognizer::MakeUnistrokes(MultiStrokeGesture strokes)
@@ -550,14 +555,11 @@ namespace DollarRecognizer
             MultiStrokeGesture unistrokes; // array of point arrays
             for (int r = 0; r < orders.size(); r++)
             {
-
                 for (int b = 0; b < pow(2, orders.at(r).size()); b++) // use b's bits for directions
                 {
-
                     Path2D unistroke; // array of points
                     for (int i = 0; i < orders.at(r).size(); i++)
                     {
-
                         Path2D pts;
 
                        if (((b >> i) & 1) == 1) {  // is b's bit at index i on?
@@ -583,7 +585,7 @@ namespace DollarRecognizer
                         }
 
                     }
-
+					cout << " pushhhhh" << endl;
                     unistrokes.push_back(unistroke); // add one unistroke to set
 
                 }
@@ -682,11 +684,8 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
 {
 	results.erase(results.begin(),results.end());
 
-	cout << " multirecognize() " << endl;
-
     bool useProtractor=false;
     if(method=="protractor"){
-        cout<<"using protactor"<<endl;
          useProtractor=true;
     }
 
@@ -703,8 +702,6 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
         Point2D startv=GeometricRecognizer::CalcStartUnitVector(points,StartAngleIndex);
         vector<double> Vector = vectorize(points);
 
-		cout << " multirecognize() 2 " << endl;
-
         //--- Initialize best distance to the largest possible number
         //--- That way everything will be better than that
         double bestDistance = MAX_DOUBLE;
@@ -713,8 +710,6 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
         double score = 0.0;
         bool requireSameNoOfStrokes = false;
 		
-		cout << " multirecognize() 3 " << endl;
-
         for (int i = 0; i < (int)allmultistrokenormalizedgestures.size(); i++) // for each multistroke
             {
                 GestureTemplates Mgestures= allmultistrokenormalizedgestures.at(i);
@@ -728,7 +723,6 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
                             double distance;
                             if (useProtractor) // for Protractor
                             {
-                                cout<<"using protactor"<<endl;
                                distance = GeometricRecognizer::optimalCosineDistance(Vector, Mgesture.Vector);
                             }
                             else // Golden Section Search (original $N)
@@ -745,18 +739,10 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
                     }
                 }
 				
-				cout << " multirecognize()...: " << std::to_string(i) << endl;
-
 				RecognitionResult match(allmultistrokenormalizedgestures[i].at(1).name, 1.0 - (bestDistance / halfDiagonal));
-				cout << " multirecognize() match .... " << endl;
 				results.push_back(match);
-				cout << " multirecognize() push .... " << endl;
 				bestDistance = MAX_DOUBLE;
-
-				cout << " multirecognize() after .... " << endl;
             }
-
-		cout << " multirecognize() after loop " << endl;
 
         //--- Turn the distance into a percentage by dividing it by
         //---  half the maximum possible distance (across the diagonal
@@ -784,8 +770,6 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
     return bestMatch;
 	*/
 
-		cout << " multirecognize() end" << endl;
-	
 	if(results.size() == 0){
 		 cout << "Couldn't find a good match." << endl;
 		 results.push_back(RecognitionResult(L"Unknown", 1));

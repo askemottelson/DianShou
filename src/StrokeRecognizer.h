@@ -25,7 +25,7 @@ class StrokeRecognizer{
 		void addChar(wstring charId, wstring charac);
 		wstring getChar(wstring charId);
 		void init();
-		MultiStrokeGesture mirror();
+		MultiStrokeGesture mirror(MultiStrokeGesture gesture);
 		MultiStrokeGesture MultiStrokes;
 		void reset_gestures();
 		void reset_results();
@@ -39,7 +39,7 @@ class StrokeRecognizer{
 		vector<wstring> MgestureList;
 		GeometricRecognizer gm;
 		std::map<wstring,wstring> gestureMap;
-		MultiStrokeGesture mirror(MultiStrokeGesture gesture);
+		
 		int maxXY(Path2D line, string xy);
 		int minXY(Path2D line, string xy);
 		vector<RecognitionResult> results;

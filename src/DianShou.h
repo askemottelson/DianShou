@@ -2,12 +2,12 @@
 
 #include "ofMain.h"
 #include "LeapListener.h"
+#include "StrokeRecognizer.h"
 #include "VirtualKeyboard.h"
+#include "TextInput/textInput.h"
 
 #include "ofxFTGLFont.h"
 #include "ofxSQLiteHeaders.h"
-#include "StrokeRecognizer.h"
-#include "TextInput/textInput.h"
 
 #include <vector>
 
