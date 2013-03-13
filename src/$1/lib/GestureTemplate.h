@@ -10,11 +10,11 @@ namespace DollarRecognizer
 class GestureTemplate
 {
 public:
-	string name;
+	wstring name;
 	Path2D points;
         Point2D startv;
         vector<double> Vector;
-        GestureTemplate(string name, Path2D points,Point2D startv,vector<double> Vector)
+        GestureTemplate(wstring name, Path2D points,Point2D startv,vector<double> Vector)
 	{
 		this->name   = name;
 		this->points = points;
@@ -22,7 +22,7 @@ public:
             this->Vector =Vector;
 	}
 
-        GestureTemplate(string name, Path2D points)
+        GestureTemplate(wstring name, Path2D points)
         {
                 this->name   = name;
                 this->points = points;

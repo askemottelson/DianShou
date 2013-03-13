@@ -2,7 +2,6 @@
 #include "DianShou.h"
 
 #include "ofAppGlutWindow.h"
-#include "example-ofxUIAllWidgets\src\testApp.h"
 
 //========================================================================
 int main( ){

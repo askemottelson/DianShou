@@ -77,7 +77,7 @@ namespace DollarRecognizer
 //                Path2D addPointsToMakePath(Point2D v1,Point2D v2,Point2D v3,Point2D v4);
 //                Path2D addPointsToMakePath(Point2D v1,Point2D v2,Point2D v3);
 //                Path2D addPointsToMakePath(Point2D v1,Point2D v2);
-                int addTemplate(string name, Path2D points);
+                int addTemplate(wstring name, Path2D points);
 		DollarRecognizer::Rectangle boundingBox(Path2D points);
 		Point2D centroid(Path2D points);
 		double getDistance(Point2D p1, Point2D p2);
@@ -101,17 +101,17 @@ namespace DollarRecognizer
                 void Multistroke(string name,bool useBoundedRotationIndoubleiance, vector<Path2D> strokes); // constructor
 
                 void loadTemplates();
-                void activateTemplates(vector<string>);
+                void activateTemplates(vector<wstring>);
                 void activateTemplates();
                 void loadMultistrokeTemplates();
-                void activateMultiStrokesTemplates(vector<string>);
+                void activateMultiStrokesTemplates(vector<wstring>);
 
                 void Multirecognize(MultiStrokeGesture paths, string method);
-				int addMultiStrokesTemplate(string name, MultiStrokeGesture paths);
+				int addMultiStrokesTemplate(wstring name, MultiStrokeGesture paths);
 		vector<RecognitionResult> getResults();
 
         private:
-                bool inTemplates(string, vector<string>);
+                bool inTemplates(wstring, vector<wstring>);
                 double Deg2Rad(double d);
                 double Rad2Deg(double r);
 
@@ -121,7 +121,7 @@ namespace DollarRecognizer
                 Point2D CalcStartUnitVector(Path2D points,double index) ;// start angle from points[0] to points[index] normalized as a unit vector
                 vector<double> Vectorize(Path2D points,bool useBoundedRotationInvariance); // for Protractor
                 Path2D CombineStrokes(MultiStrokeGesture strokes);
-                Path2D UnistrokeTemplate(Path2D points,string name);
+                Path2D UnistrokeTemplate(Path2D points,wstring name);
 
                 double AngleBetweenUnitVectors(Point2D v1,Point2D v2);
 				vector<RecognitionResult> results;

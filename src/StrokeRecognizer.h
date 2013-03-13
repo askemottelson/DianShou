@@ -2,7 +2,9 @@
 #include "$1\lib\PathWriter.h"
 
 #include <map> 
+#include <string>
 #include <iostream>
+#include <vector>
 
 using namespace DollarRecognizer;
 
@@ -13,31 +15,34 @@ class StrokeRecognizer{
 		StrokeRecognizer();
 		virtual ~StrokeRecognizer();
 
-		string recognize();
+		void recognize();
 		void addPoint(int x, int y);
 		void addLine();
 		void reset();
 		void reset_line();
-		void addGesture(string name);
+		void addGesture(wstring name);
 		bool valid();
-		void addChar(string charId, string charac);
-		string getChar(string charId);
+		void addChar(wstring charId, wstring charac);
+		wstring getChar(wstring charId);
 		void init();
 		MultiStrokeGesture mirror();
 		MultiStrokeGesture MultiStrokes;
 		void reset_gestures();
+		void reset_results();
+		vector<RecognitionResult> returnResults();
 
 		
 
 	private:
 		Path2D line;
 		utils util;
-		vector<string> MgestureList;
+		vector<wstring> MgestureList;
 		GeometricRecognizer gm;
-		std::map<string,string> gestureMap;
+		std::map<wstring,wstring> gestureMap;
 		MultiStrokeGesture mirror(MultiStrokeGesture gesture);
 		int maxXY(Path2D line, string xy);
 		int minXY(Path2D line, string xy);
+		vector<RecognitionResult> results;
 		
 		
 		

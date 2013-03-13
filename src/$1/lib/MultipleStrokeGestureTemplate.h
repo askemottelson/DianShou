@@ -9,10 +9,10 @@ namespace DollarRecognizer
 class MultipleStrokeGestureTemplate
 {
 public:
-        string name;
+        wstring name;
         MultiStrokeGesture paths;
 
-        MultipleStrokeGestureTemplate(string name, MultiStrokeGesture paths)
+        MultipleStrokeGestureTemplate(wstring name, MultiStrokeGesture paths)
         {
                 this->name   = name;
                 this->paths = paths;

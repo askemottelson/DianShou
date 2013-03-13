@@ -59,9 +59,9 @@ namespace DollarRecognizer
 	class RecognitionResult
 	{
 	public:
-		string name;
+		wstring name;
 		double score;
-		RecognitionResult(string name, double score)
+		RecognitionResult(wstring name, double score)
 		{
 			this->name = name;
 			this->score = score;

@@ -19,9 +19,8 @@ public:
 	void	draw();
 	void	keyPressed(int key);
 	void	clear();
-	void	insertChar(string key);
-	
-	string	text;
+	void	setValue(wstring key);
+	wstring	text;
 	int		position;
 	
 	ofEvent<string> evtEnter;
