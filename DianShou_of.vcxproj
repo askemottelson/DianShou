@@ -59,6 +59,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\osc;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\posix;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\win32;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\libs;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib\sqlite;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxFTGLFont;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\libs\FTGL\include\2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
@@ -123,6 +124,7 @@ copy Leap\lib\x86\*.dll "$(OutDir)"
     <ClCompile Include="src\DianShou.cpp" />
     <ClCompile Include="src\StrokeRecognizer.cpp" />
     <ClCompile Include="src\TextInput\textInput.cpp" />
+    <ClCompile Include="src\VirtualKeyboard.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\addons\ofxFTGLFont\ofxFTGLFont.h" />
@@ -152,6 +154,7 @@ copy Leap\lib\x86\*.dll "$(OutDir)"
     <ClInclude Include="src\LeapListener.h" />
     <ClInclude Include="src\StrokeRecognizer.h" />
     <ClInclude Include="src\TextInput\textInput.h" />
+    <ClInclude Include="src\VirtualKeyboard.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\libs\openFrameworksCompiled\project\vs2010\openframeworksLib.vcxproj">
