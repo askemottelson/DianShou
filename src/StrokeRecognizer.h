@@ -30,14 +30,13 @@ class StrokeRecognizer{
 		void reset_gestures();
 		void reset_results();
 		vector<RecognitionResult> returnResults();
-
+		GeometricRecognizer gm;
 		
 
 	private:
 		Path2D line;
 		utils util;
 		vector<wstring> MgestureList;
-		GeometricRecognizer gm;
 		std::map<wstring,wstring> gestureMap;
 		
 		int maxXY(Path2D line, string xy);

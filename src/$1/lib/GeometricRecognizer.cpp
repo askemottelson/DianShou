@@ -506,48 +506,31 @@ namespace DollarRecognizer
             cout<< "No. of templates in Multi-Stroke database " <<allMtemplates.size()<<endl;
             for (unsigned int i=0; i<allMtemplates.size() ; i++)
             {
-				cout << "i " << i << endl;
-
               //  cout<< "Processing Template " <<allMtemplates.at(i).name<<endl;
                 if (inTemplates(allMtemplates.at(i).name, list))
                 {
-					cout << "name is there " << endl;
                   //  cout<<"Added Template :"<<allMtemplates.at(i).name<<endl;
                     Mtemplates.push_back(allMtemplates.at(i));
-					cout << "push " << endl;
                     order.clear();
                     orders.clear();
-					cout << "clear " << endl;
                     MultipleStrokeGestureTemplate strokes = allMtemplates.at(i);
                     order.resize(strokes.paths.size());
-					cout << "resize " << endl;
 
                     for (int i = 0; i < strokes.paths.size(); i++)
                             order[i] = i; // initialize; // initialize
 
-					cout << "order init " << endl;
-
                     GeometricRecognizer::HeapPermute(strokes.paths.size());
-					cout << "heappermute " << endl;
-                    //MultiStrokeGesture unistrokes = GeometricRecognizer::MakeUnistrokes(strokes.paths); // returns array of point arrays
-					MultiStrokeGesture unistrokes = strokes.paths;
+                    MultiStrokeGesture unistrokes = GeometricRecognizer::MakeUnistrokes(strokes.paths); // returns array of point arrays
+					//MultiStrokeGesture unistrokes = strokes.paths;
 
-
-					cout << "unistroeks " << endl;
                     allunistrokenormalizedtemplates.clear();
-					cout << "clear2 " << endl;
                     for (int j = 0; j < unistrokes.size(); j++)
                         Path2D unistroke = GeometricRecognizer::UnistrokeTemplate(unistrokes.at(j),allMtemplates.at(i).name);
                     
-					cout << "push2 " << endl;
 					allmultistrokenormalizedgestures.push_back(allunistrokenormalizedtemplates);
 
-
                 }
-
-
-               }
-			cout << "activation done " << endl;
+            }
         }
         //Perform permutations to make all the combination of multistroke gesture
         MultiStrokeGesture GeometricRecognizer::MakeUnistrokes(MultiStrokeGesture strokes)
@@ -585,9 +568,7 @@ namespace DollarRecognizer
                         }
 
                     }
-					cout << " pushhhhh" << endl;
                     unistrokes.push_back(unistroke); // add one unistroke to set
-
                 }
             }
             return unistrokes;

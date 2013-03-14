@@ -37,7 +37,7 @@ void textInput::draw() {
 	ofLine(cursorx+width, cursory, cursorx+width, cursory+height);
 	ofLine(cursorx, cursory+height, cursorx+width, cursory+height);
 
-	font.drawWString(text, startx+5, cursory+30);
+	font.drawWString(text, startx+5, cursory+33);
 	
 }
 

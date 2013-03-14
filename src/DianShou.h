@@ -17,7 +17,6 @@ using namespace Leap;
 class DianShou : public ofBaseApp{
 
 	public:
-
 		DianShou();
 		virtual ~DianShou();
 
@@ -43,25 +42,19 @@ class DianShou : public ofBaseApp{
 		int *bgcolor;
 		int *cursorcolor;
 		int *cursor;
-
 		std::vector<float> circle;
-
-		// ftgl
-		
-		ofxFTGLFont font;
-		//string myString;
 
 		// sqlite
 		ofxSQLite* sqlite;
-		
 
-		// $1
+		// $N
 		StrokeRecognizer recognizer;
 
 		// GUI
 		textInput textBox;
 
 	private:
+		int drawDB;
 		void initDB();
 		wstring writingString;
 		void selectChar(int fingers);
@@ -69,10 +62,11 @@ class DianShou : public ofBaseApp{
 		VirtualKeyboard v_keyboard;
 		void startRecognition();
 		bool hasRecognized;
+		vector<wstring> allchars;
 
+		// string to wstring
 		std::wstring s2ws(const std::string& s)
 		{
-
 			int len;
 			int slength = (int)s.length() + 1;
 			len = MultiByteToWideChar(CP_UTF8, 0, s.c_str(), slength, 0, 0); 
