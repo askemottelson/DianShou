@@ -676,11 +676,17 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
         //---  or else recognition will be impossible
         if (allmultistrokenormalizedgestures.empty())
         {
-                std::cout << "No templates loaded so no symbols to match." << std::endl;
-                //return RecognitionResult("Unknown", 0);
+            std::cout << "No templates loaded so no symbols to match." << std::endl;
+            //return RecognitionResult("Unknown", 0);
         }
         points=normalizePath(points);
-        Point2D startv=GeometricRecognizer::CalcStartUnitVector(points,StartAngleIndex);
+        Point2D startv;
+
+		if(points.size() < (int)StartAngleIndex)
+			startv = GeometricRecognizer::CalcStartUnitVector(points,points.size()-1);
+		else
+			startv = GeometricRecognizer::CalcStartUnitVector(points,StartAngleIndex);
+
         vector<double> Vector = vectorize(points);
 
         //--- Initialize best distance to the largest possible number

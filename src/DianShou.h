@@ -12,8 +12,6 @@
 #include <vector>
 
 
-using namespace Leap;
-
 class DianShou : public ofBaseApp{
 
 	public:
@@ -34,10 +32,7 @@ class DianShou : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		// Create a sample listener and controller
-		LeapListener listener;
-		Controller controller;
-
+		
 		// global variables
 		int *bgcolor;
 		int *cursorcolor;
@@ -63,6 +58,12 @@ class DianShou : public ofBaseApp{
 		void startRecognition();
 		bool hasRecognized;
 		vector<wstring> allchars;
+		void processGestures();
+		
+		// Create a sample listener and controller
+		LeapListener listener;
+		Leap::Controller controller;
+		int32_t lastGesture;
 
 		// string to wstring
 		std::wstring s2ws(const std::string& s)

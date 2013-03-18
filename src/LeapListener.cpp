@@ -2,6 +2,7 @@
 
 void LeapListener::onInit(const Controller& controller) {
   std::cout << "Initialized" << std::endl;
+  controller.enableGesture( Leap::Gesture::TYPE_SWIPE );
 }
 
 void LeapListener::onConnect(const Controller& controller) {

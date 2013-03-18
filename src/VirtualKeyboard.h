@@ -5,7 +5,7 @@ class VirtualKeyboard{
 	
 
 	public:
-		void pressKey(char key);
+		void pressKey(UINT key);
 		void message(std::wstring msg);
 
 	private:

@@ -29,7 +29,6 @@ void textInput::draw() {
 	ofSetColor(255);
 	ofRect(cursorx+1,cursory,width-1,height-1);
 
-
 	ofSetColor(0);
 	// NW to SW
 	ofLine(cursorx, cursory-1, cursorx, cursory+height);
@@ -37,8 +36,7 @@ void textInput::draw() {
 	ofLine(cursorx+width, cursory, cursorx+width, cursory+height);
 	ofLine(cursorx, cursory+height, cursorx+width, cursory+height);
 
-	font.drawWString(text, startx+5, cursory+33);
-	
+	font.drawWString(text, startx+10, cursory+33);
 }
 
 void textInput::keyPressed(int key) {	

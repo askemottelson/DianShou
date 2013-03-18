@@ -1,9 +1,10 @@
-#include "ofMain.h"
+﻿#include "ofMain.h"
 #include "DianShou.h"
 
 #include "ofAppGlutWindow.h"
 
-//========================================================================
+
+// 点手 character recognition using leap motion
 int main( ){
 
     ofAppGlutWindow window;

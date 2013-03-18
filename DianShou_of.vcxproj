@@ -20,6 +20,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -85,15 +86,16 @@ copy Leap\lib\x86\*.dll "$(OutDir)"
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;POCO_STATIC;CAIRO_WIN32_STATIC_BUILD;DISABLE_SOME_FLOATING_POINT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat />
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\osc;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\posix;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip\win32;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src\ip;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\libs\oscpack\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxOsc\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\libs;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxXmlSettings\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxUI\src;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib\sqlite;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite\lib;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxSQLite;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\addons\ofxFTGLFont;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\libs\FTGL\include\2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -102,8 +104,9 @@ copy Leap\lib\x86\*.dll "$(OutDir)"
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Leapd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;ftgl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\libs\FTGL\lib\vs2012;C:\Users\aske7\Dropbox\DIKU\Bachelor\udvikling\files\openframeworks\apps\myApps\DianShou_of\Leap\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries);msvcrt.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent />
   </ItemDefinitionGroup>
