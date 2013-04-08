@@ -506,10 +506,10 @@ namespace DollarRecognizer
             cout<< "No. of templates in Multi-Stroke database " <<allMtemplates.size()<<endl;
             for (unsigned int i=0; i<allMtemplates.size() ; i++)
             {
-              //  cout<< "Processing Template " <<allMtemplates.at(i).name<<endl;
+                cout<< "Processing Template " << i <<endl;
                 if (inTemplates(allMtemplates.at(i).name, list))
                 {
-                  //  cout<<"Added Template :"<<allMtemplates.at(i).name<<endl;
+                    cout<<"Added Template :" << i << endl;
                     Mtemplates.push_back(allMtemplates.at(i));
                     order.clear();
                     orders.clear();
@@ -664,12 +664,10 @@ double GeometricRecognizer::Rad2Deg(double r)
 void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string method)
 {
 	results.erase(results.begin(),results.end());
-
     bool useProtractor=false;
     if(method=="protractor"){
          useProtractor=true;
     }
-
 
         Path2D points=CombineStrokes(strokes);
         //--- Make sure we have some templates to compare this to
@@ -681,7 +679,6 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
         }
         points=normalizePath(points);
         Point2D startv;
-
 		if(points.size() < (int)StartAngleIndex)
 			startv = GeometricRecognizer::CalcStartUnitVector(points,points.size()-1);
 		else
@@ -696,7 +693,6 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
         int indexOfBestMatch = -1;
         double score = 0.0;
         bool requireSameNoOfStrokes = false;
-		
         for (int i = 0; i < (int)allmultistrokenormalizedgestures.size(); i++) // for each multistroke
             {
                 GestureTemplates Mgestures= allmultistrokenormalizedgestures.at(i);
@@ -730,7 +726,6 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
 				results.push_back(match);
 				bestDistance = MAX_DOUBLE;
             }
-
         //--- Turn the distance into a percentage by dividing it by
         //---  half the maximum possible distance (across the diagonal
         //---  of the square we scaled everything too)
@@ -756,12 +751,12 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
     RecognitionResult bestMatch(tmp2.name, score);
     return bestMatch;
 	*/
-
+		cout << "strik 9 " << endl;
 	if(results.size() == 0){
 		 cout << "Couldn't find a good match." << endl;
 		 results.push_back(RecognitionResult(L"Unknown", 1));
 	}
-	
+	cout << "strik 10 " << endl;
 }
 
 struct cmpResults

@@ -56,7 +56,7 @@ class DianShou : public ofBaseApp{
 		vector<int> fingervector;
 		VirtualKeyboard v_keyboard;
 		void startRecognition();
-		bool hasRecognized;
+		bool readyToRecognize;
 		vector<wstring> allchars;
 		void processGestures();
 		
