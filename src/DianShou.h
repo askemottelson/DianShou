@@ -57,8 +57,10 @@ class DianShou : public ofBaseApp{
 		VirtualKeyboard v_keyboard;
 		void startRecognition();
 		bool readyToRecognize;
+		bool ready();
 		vector<wstring> allchars;
 		void processGestures();
+		vector<int> lastfinger;
 		
 		// Create a sample listener and controller
 		LeapListener listener;

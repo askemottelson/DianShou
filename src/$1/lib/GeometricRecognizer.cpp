@@ -506,10 +506,10 @@ namespace DollarRecognizer
             cout<< "No. of templates in Multi-Stroke database " <<allMtemplates.size()<<endl;
             for (unsigned int i=0; i<allMtemplates.size() ; i++)
             {
-                cout<< "Processing Template " << i <<endl;
+                //cout<< "Processing Template " << i <<endl;
                 if (inTemplates(allMtemplates.at(i).name, list))
                 {
-                    cout<<"Added Template :" << i << endl;
+                    //cout<<"Added Template :" << i << endl;
                     Mtemplates.push_back(allMtemplates.at(i));
                     order.clear();
                     orders.clear();
@@ -751,12 +751,10 @@ void GeometricRecognizer::Multirecognize(MultiStrokeGesture strokes,string metho
     RecognitionResult bestMatch(tmp2.name, score);
     return bestMatch;
 	*/
-		cout << "strik 9 " << endl;
 	if(results.size() == 0){
 		 cout << "Couldn't find a good match." << endl;
 		 results.push_back(RecognitionResult(L"Unknown", 1));
 	}
-	cout << "strik 10 " << endl;
 }
 
 struct cmpResults
