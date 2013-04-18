@@ -34,10 +34,12 @@ class DianShou : public ofBaseApp{
 
 		
 		// global variables
-		int *bgcolor;
-		int *cursorcolor;
-		int *cursor;
+		std::vector<int> bgcolor;
+		std::vector<int> cursorcolor;
+		std::vector<int> cursor;
+		std::vector<int> helpColor;
 		std::vector<float> circle;
+		int z_value;
 
 		// sqlite
 		ofxSQLite* sqlite;
@@ -61,6 +63,10 @@ class DianShou : public ofBaseApp{
 		vector<wstring> allchars;
 		void processGestures();
 		vector<int> lastfinger;
+		float lineWidth(int z);
+		bool enableHelp;
+		void drawHelp();
+		string helpText;
 		
 		// Create a sample listener and controller
 		LeapListener listener;

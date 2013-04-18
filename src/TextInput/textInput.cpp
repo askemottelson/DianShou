@@ -7,10 +7,11 @@ textInput::textInput() {
 	cursory = 0;
 	startx = cursorx;
 	font.loadFont("arial_uni.ttf", 36.0f, true,true);
+	font2.loadFont("arial_uni.ttf", 18.0f, true,true);
 }
 
 void textInput::init() {
-	ofAddListener(ofEvents().keyPressed, this, &textInput::keyPressedEvent);
+	
 }
 
 void textInput::setValue(wstring key){
@@ -18,8 +19,7 @@ void textInput::setValue(wstring key){
 	position = 0;
 }
 
-
-void textInput::draw() {
+void textInput::drawRects() {
 	ofSetLineWidth(1.0f);
 	
 	int width = ofGetWindowWidth() - 20;
@@ -39,52 +39,9 @@ void textInput::draw() {
 	font.drawWString(text, startx+10, cursory+33);
 }
 
-void textInput::keyPressed(int key) {	
-	/*if (key==OF_KEY_RETURN) {
-		ofNotifyEvent(evtEnter, text, this);
-		if (evtEnter.empty()) {
-			text.insert(text.begin()+position, '\n');
-			position++;
-		}
-	}*/
-	if (key==OF_KEY_BACKSPACE) {
-		if (position>0) {
-			text.erase(text.begin()+position-1);
-			--position;
-		}
-	}
-	else if (key==OF_KEY_DEL) {
-		if (text.size() > position) {
-			text.erase(text.begin()+position);
-		}
-	}
-	else if (key==OF_KEY_LEFT){
-		if (position>0)
-			--position;
-	}
-	else if (key==OF_KEY_RIGHT){
-		if (position<text.size()+1)
-			++position;	
-	}
-	else{
-		text.insert(text.begin()+position, key);
-		position++;
-	}
-
-	//cursorx = position *12 +startx;
-
-/*	//for multiline:
-	cursorx = cursory = 0;
-	for (int i=0; i<position; ++i) {
-		if (*(text.begin()+i) == '\n') {
-			++cursory;
-			cursorx = 0;
-		} else {
-			cursorx++;
-		}
-	}
-
-*/
+void textInput::drawText(string str, int x, int y, int r, int g, int b){
+	ofSetColor(r,g,b);
+	font2.drawString(str, x, y);
 }
 
 void textInput::clear() {
@@ -92,6 +49,3 @@ void textInput::clear() {
 	position=0;
 }
 
-void textInput::keyPressedEvent(ofKeyEventArgs &a) {
-	//keyPressed(a.key);
-}

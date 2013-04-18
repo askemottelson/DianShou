@@ -16,18 +16,17 @@ class textInput {
 public:
 	textInput();
 	void	init();
-	void	draw();
-	void	keyPressed(int key);
+	void	drawRects();
+	void	drawText(string str, int x, int y, int r, int g, int b);
 	void	clear();
 	void	setValue(wstring key);
 	wstring	text;
 	int		position;
 	
 	ofEvent<string> evtEnter;
-
 	ofxFTGLFont font;
+	ofxFTGLFont font2;
 	
 protected:
-	void	keyPressedEvent(ofKeyEventArgs &a);
 	int		cursorx, cursory, startx;
 };
