@@ -14,19 +14,19 @@
 
 class textInput {
 public:
-	textInput();
-	void	init();
-	void	drawRects();
-	void	drawText(string str, int x, int y, int r, int g, int b);
-	void	clear();
-	void	setValue(wstring key);
-	wstring	text;
-	int		position;
-	
-	ofEvent<string> evtEnter;
-	ofxFTGLFont font;
-	ofxFTGLFont font2;
-	
+    textInput();
+    void	init();
+    void	drawRects();
+    void	drawText(string str, int x, int y, int r, int g, int b);
+    void	clear();
+    void	setValue(wstring key);
+    wstring	text;
+    int		position;
+    
+    ofEvent<string> evtEnter;
+    ofxFTGLFont font;
+    ofxFTGLFont font2;
+    
 protected:
-	int		cursorx, cursory, startx;
+    int		cursorx, cursory, startx;
 };
